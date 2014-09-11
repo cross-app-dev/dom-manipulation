@@ -35,5 +35,8 @@ console.log("Number of child nodes is: " , titleElemNode.childNodes.length);
 console.log("But it has ", titleElemNode.childElementCount , "child element nodes");
 var textNode = titleElemNode.childNodes[0];
 console.log("Type of node is:" , getNodeType(textNode.nodeType));
+/* For most Node type, this returns null and any set operation is ignored. For nodes of type TEXT_NODE (Text Object),
+ the value corresponds to the text data contained in the object.*/
+console.log("contents of text node is: ", textNode.nodeValue);
 var attributeNode = titleElemNode.getAttributeNode("id");
 console.log("value of attribute ", attributeNode.name , "is :", attributeNode.value );
